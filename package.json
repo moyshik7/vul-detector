@@ -4,7 +4,7 @@
   "description": "CVE Vulnerability Scanner - Scan websites for known CVE vulnerabilities",
   "main": "index.js",
   "bin": {
-    "vul-detector": "./index.js"
+    "vul-detector": "index.js"
   },
   "files": [
     "index.js",
@@ -16,7 +16,12 @@
     "start": "node index.js",
     "scan": "node index.js"
   },
-  "keywords": ["cve", "vulnerability", "scanner", "security"],
+  "keywords": [
+    "cve",
+    "vulnerability",
+    "scanner",
+    "security"
+  ],
   "license": "MIT",
   "dependencies": {
     "axios": "^1.7.0",
