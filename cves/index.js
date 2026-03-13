@@ -27,7 +27,7 @@ for (const file of files.sort()) {
       modules.push(mod);
     }
   } catch (err) {
-    console.error(`Warning: Failed to load CVE module ${file}: ${err.message}`);
+    console.error(`Warning: Failed to load module ${file}: ${err.message}`);
   }
 }
 
