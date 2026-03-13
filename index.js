@@ -7,7 +7,7 @@ const { Reporter } = require('./lib/reporter');
 
 const banner = `
 ${chalk.redBright('╔══════════════════════════════════════════════════════════╗')}
-${chalk.redBright('║')}  ${chalk.bold.whiteBright('⚡ VUL-DETECTOR')} ${chalk.gray('— CVE Vulnerability Scanner')}            ${chalk.redBright('║')}
+${chalk.redBright('║')}  ${chalk.bold.whiteBright('⚡ VUL-DETECTOR')} ${chalk.gray('— CVE Vulnerability Scanner')}             ${chalk.redBright('║')}
 ${chalk.redBright('║')}  ${chalk.gray('Scan websites for known CVE vulnerabilities')}             ${chalk.redBright('║')}
 ${chalk.redBright('╚══════════════════════════════════════════════════════════╝')}
 `;
@@ -24,6 +24,7 @@ program
   .option('--timeout <ms>', 'Request timeout in milliseconds', '10000')
   .option('--no-color', 'Disable colored output')
   .option('-v, --verbose', 'Show detailed scan progress')
+  .option('--verify-write', 'Enable deep write-verification probes (non-destructive)')
   .parse(process.argv);
 
 const options = program.opts();
@@ -45,6 +46,10 @@ const options = program.opts();
   if (options.cve) {
     console.log(chalk.whiteBright('  Filter: ') + chalk.yellowBright(options.cve));
   }
+  if (options.verifyWrite) {
+    console.log(chalk.yellowBright('  Mode:   ') + chalk.bgYellowBright.black(' VERIFY-WRITE '));
+    console.log(chalk.gray('          Deep write-verification probes enabled (non-destructive)'));
+  }
   console.log();
 
   // Initialize scanner
@@ -52,6 +57,7 @@ const options = program.opts();
     timeout: parseInt(options.timeout, 10),
     verbose: options.verbose || false,
     cveFilter: options.cve || null,
+    verifyWrite: options.verifyWrite || false,
   });
 
   // Load modules
