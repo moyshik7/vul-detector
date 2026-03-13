@@ -1,6 +1,6 @@
 {
   "name": "vul-detector",
-  "version": "1.4.0",
+  "version": "1.4.6",
   "description": "CVE Vulnerability Scanner - Scan websites for known CVE vulnerabilities",
   "author": "moyshik7",
   "repository": {
@@ -38,5 +38,6 @@
     "cheerio": "^1.0.0",
     "cli-table3": "^0.6.5",
     "commander": "^12.1.0"
-  }
+  },
+  "preferGlobal": true
 }
