@@ -1,0 +1,28 @@
+{
+  "name": "vul-detector",
+  "version": "1.3.0",
+  "description": "CVE Vulnerability Scanner - Scan websites for known CVE vulnerabilities",
+  "main": "index.js",
+  "bin": {
+    "vul-detector": "./index.js"
+  },
+  "files": [
+    "index.js",
+    "lib/",
+    "cves/",
+    "README.md"
+  ],
+  "scripts": {
+    "start": "node index.js",
+    "scan": "node index.js"
+  },
+  "keywords": ["cve", "vulnerability", "scanner", "security"],
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^1.7.0",
+    "chalk": "^4.1.2",
+    "cheerio": "^1.0.0",
+    "cli-table3": "^0.6.5",
+    "commander": "^12.1.0"
+  }
+}
