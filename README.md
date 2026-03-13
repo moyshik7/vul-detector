@@ -12,39 +12,43 @@ A fast, modular Node.js vulnerability scanner designed to detect known CVEs and 
 
 ## 📦 Installation
 
-```bash
-# Clone the repository (or go to the directory)
-cd vul-detector
+Install globally using npm:
 
-# Install dependencies
-npm install
+```bash
+npm install -g vul-detector
+```
+
+Or run without installing using npx:
+
+```bash
+npx vul-detector --target https://example.com
 ```
 
 ## 🛠 Usage
 
 Basic scan:
 ```bash
-node index.js --target https://example.com
+vul-detector --target https://example.com
 ```
 
 Verbose scan (shows progress for each module):
 ```bash
-node index.js --target https://example.com --verbose
+vul-detector --target https://example.com --verbose
 ```
 
 Scan for a specific CVE only:
 ```bash
-node index.js --target https://example.com --cve CVE-2025-55182
+vul-detector --target https://example.com --cve CVE-2025-55182
 ```
 
 Filter by minimum severity:
 ```bash
-node index.js --target https://example.com --severity HIGH
+vul-detector --target https://example.com --severity HIGH
 ```
 
 Full options:
 ```bash
-node index.js --help
+vul-detector --help
 ```
 
 ## 🧩 Included CVE Modules (Samples)

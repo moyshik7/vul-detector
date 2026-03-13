@@ -2,6 +2,15 @@
   "name": "vul-detector",
   "version": "1.3.0",
   "description": "CVE Vulnerability Scanner - Scan websites for known CVE vulnerabilities",
+  "author": "moyshik7",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/moyshik7/vul-detector.git"
+  },
+  "bugs": {
+    "url": "https://github.com/moyshik7/vul-detector/issues"
+  },
+  "homepage": "https://github.com/moyshik7/vul-detector#readme",
   "main": "index.js",
   "bin": {
     "vul-detector": "index.js"
